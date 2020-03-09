@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node
+  - docker build -t janellekim3/node .
+  - docker images janellekim3/node
 
 before_deploy:
   - docker login -u janellekim3 -p kaicurl37*
 
 deploy:
   provider: script
-  script: docker push mannydesigns/mode
+  script: docker push janellekim3/node
   on:
     branch: master
